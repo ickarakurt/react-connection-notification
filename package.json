@@ -1,0 +1,94 @@
+{
+  "version": "0.1.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "react-connection-notification",
+  "author": "Cem Karakurt",
+  "module": "dist/react-connection-notification-alert.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-connection-notification.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-connection-notification.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.5",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "husky": "^7.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "size-limit": "^7.0.5",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "images": "^3.2.3",
+    "public": "^0.1.5",
+    "rollup-plugin-svg": "^2.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/fileMock.js"
+    }
+  },
+  "description": "React internet status notification",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ickarakurt/react-internet-connection-alert.git"
+  },
+  "keywords": [
+    "react",
+    "connection",
+    "status",
+    "connection",
+    "alert",
+    "internet",
+    "status",
+    "online",
+    "offline"
+  ],
+  "bugs": {
+    "url": "https://github.com/ickarakurt/react-internet-connection-alert/issues"
+  },
+  "homepage": "https://github.com/ickarakurt/react-internet-connection-alert#readme"
+}
